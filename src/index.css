@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  font-family: "Montserrat", serif;
+  scroll-behavior: smooth;
+  background: transparent;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  @apply bg-base/20;
+}
+
+/************** TYPOGRAPHY **************/
+.headline-2 {
+  @apply text-3xl font-extrabold text-darkGrey;
+  background: -webkit-linear-gradient(0deg, #353432, #a1a1aa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
+.headline-3 {
+  @apply text-4xl font-bold text-darkGrey;
+  background: -webkit-linear-gradient(0deg, #353432, #a1a1aa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
+
+.headline-4{
+  @apply text-lg font-semibold text-darkGrey tracking-wide;
+}
+
+.headline-5{
+  @apply text-sm font-semibold text-darkGrey;
+}
+
+.headline-6 {
+  @apply text-2xl font-bold text-darkGrey inline-flex items-center mb-4;
+  background: -webkit-linear-gradient(0deg, #353432, #a1a1aa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
+/************** COMPONENTS **************/
+/*=======> NavBar <=======*/
+/* searchInput */
+.search-input {
+  @apply flex items-center gap-3 h-9 p-3 relative
+}
+
+.search-input input {
+  @apply h-9 p-5 rounded-xl bg-white border 
+}
+
+.search-input input::placeholder {
+  @apply text-sm tracking-wider
+}
+.search-input button {
+  @apply h-8 px-2 text-darkGrey rounded-r-full absolute right-4
+}
+
+/* cart */
+.addToCart-button {
+  @apply flex flex-row gap-3 items-center bg-darkGrey w-32 py-1.5 px-5 rounded-xl text-white font-semibold 
+}
+
+.icon-cart{
+  @apply relative;
+}
+.icon-cart .numbers-cart{
+  @apply absolute text-xs top-[-5px] font-mono
+}
+
+/*=======> Menus <=======*/
+.card {
+  @apply relative bg-white max-h-52 w-56 shadow-inner border border-darkGrey/20 rounded-3xl px-3
+}
+
+.imgMenus img{
+  @apply absolute rounded-full border-darkGrey border border-4 shadow-lg shadow-gray-300 top-[-50px] left-6
+}
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+hr{
+  @apply h-[0.5px] text-darkGrey bg-darkGrey/20;
+}
+
+.imgMenus img{
+  @apply w-[110px] h-[110px];
+}
+
+.img-modal{
+  @apply w-[150px] h-[150px] rounded-xl bg-cover bg-center;
+}
+
+.cartList{
+  @apply p-2 border border-darkGrey/50 rounded-lg text-darkGrey flex flex-row gap-3;
+}
